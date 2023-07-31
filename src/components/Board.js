@@ -1,10 +1,12 @@
 import React from "react";
 import { useState } from "react";
 import Square from "./Square";
+import { ResetButton } from "./ResetButton";
 
 export default function Board() {
   const [squares, setSquares] = useState(Array(9).fill(null));
   const [xIsNext, setXIsNext] = useState(true);
+  const [gameOver, setGameOver] = useState(false)
 
   function handleClick(i) {
     if (calculateWinner(squares) || squares[i]) {
@@ -29,6 +31,11 @@ export default function Board() {
   } else {
     status = "Next player: " + (xIsNext ? "X" : "O");
   }
+  
+  const resetBoard = () => {
+    setGameOver(false);
+    setSquares(Array(9).fill(null));
+  }
 
   return (
     <>
@@ -49,6 +56,9 @@ export default function Board() {
         <Square value={squares[6]} onSquareClick={() => handleClick(6)} />
         <Square value={squares[7]} onSquareClick={() => handleClick(7)} />
         <Square value={squares[8]} onSquareClick={() => handleClick(8)} />
+      </div>
+      <div>
+      <ResetButton resetBoard={resetBoard} />
       </div>
       
       </div>

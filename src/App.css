@@ -6,9 +6,9 @@
     background-size: cover;  
   }
   .box{
-    margin-top: 100px;
+    margin-top: 30px;
     margin-left: 400px;
-    margin-bottom: 300px; 
+    margin-bottom: 200px; 
   }
    .start{
     height: 40px;
@@ -38,6 +38,7 @@
     align-items: center;
     justify-content: center;
     font-size: 55px;
+    font-family: "Fredoka",Monospace;
     font-weight: bold;
     background: url('https://cdn4.vectorstock.com/i/1000x1000/91/18/brown-wood-border-vector-1189118.jpg');
     background-size: cover;
@@ -56,4 +57,19 @@
     margin-left: 400px;
     margin-top: 0px;
   }
-  
+  .reset-btn{
+    width: 150px;
+    height: 50px;
+    background-color: antiquewhite;
+    font-size: large;
+    cursor: pointer;
+    box-shadow: 0ex;
+    border-radius: 0.4rem;
+    margin-bottom: 50px;
+    margin-top: 5px;
+    
+  }
+  .reset-btn:active {
+    box-shadow: 3px 3px 5px #fdfdfd;
+}
+
